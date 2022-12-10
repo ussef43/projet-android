@@ -2,6 +2,7 @@ package com.example.projet_android;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -20,15 +21,16 @@ public class Detail extends AppCompatActivity {
     WebView webView;
     ProgressBar loader;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.detail);
 
-        tvTitle = findViewById(R.id.tvTitle);
-        tvSource = findViewById(R.id.tvSource);
-        tvTime = findViewById(R.id.tvDate);
-        tvDesc = findViewById(R.id.tvDesc);
+        tvTitle = findViewById(R.id.txt_Title);
+        tvSource = findViewById(R.id.txt_Source);
+        tvTime = findViewById(R.id.txt_Date);
+        tvDesc = findViewById(R.id.txt_Desc);
 
         imageView = findViewById(R.id.imageView);
 
